@@ -214,9 +214,9 @@ def fact(n):
 print(fact(3))
 # print(fact(1000)) #内存溢出
 
-# 解决调用递归栈溢出 尾递归
 # 尾递归：在函数返回时 调用函数本身 return不能包含表达式
 # 无论调用多少次 只占用1个栈
+# Python标准的解释器没有针对尾递归做优化，任何递归函数都存在栈溢出的问题。
 
 def fact1(n):
     return fact_inner(n, 1)
