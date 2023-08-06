@@ -1,17 +1,30 @@
 #!/usr/bin/env python3
-#coding=utf-8 
+# coding=utf-8
 
-# 整数
+# python数据类型：Number String List Tuple Sets Dictionary
+# 可变数据类型：List Sets Dictionary
+# 不可变数据类型：Number Strig Tuple
+
+
+# 数字：int float bool
+
+# 整数 int
 # 过大可以用_分割
 print(100_000_000)
 # 16进制
 print(0xa23b2)
 
-# 浮点数
+# 浮点数 float
 # 过大过小可用科学计数法
 # 没有大小限制 但超出一定范围会表示为inf(无限大)
 print(12.76e10)
 print(-153.3e8)
+
+# boolean True False
+# 可用 and not or 运算
+print(True and True)
+print(False or True)
+print(not 2 < 4)
 
 # 字符串
 print('helllllllllo \' "string" \' \" ')
@@ -28,13 +41,7 @@ print(r''' first line
 second line\d\t\n
 third line''')
 
-# boolean True False
-# 可用 and not or 运算
-print(True and True)
-print(False or True)
-print(not 2 < 4)
-
-age = input('please enter your age:');
+age = input('please enter your age:')
 if int(age) > 18:
     print('adult')
 else:
@@ -48,6 +55,9 @@ else:
 # 常量 通常用全大写的变量名表示 (习惯用法 本质还是变量)
 
 # 除法
-print(10 / 3) #输出浮点数
-print(10 // 3) #地板除 输出整数
-print(10 % 3) #余数 输出整数
+print(10 / 3)  # 输出浮点数
+print(10 // 3)  # 地板除 输出整数
+print(10 % 3)  # 余数 输出整数
+
+# 乘方
+print(2**6)
