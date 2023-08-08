@@ -57,7 +57,7 @@ def quadratic(a, b, c):
     if not isinstance(a, (int, float)) and isinstance(b, (int, float)) and isinstance(c, (int, float)):
         raise TypeError('a, b, c must all be type int or float')
     elif b**2 - 4 * a * c < 0:
-        print('次方程无解')
+        print('此方程无解')
     else:
         temp1 = b**2 - 4 * a * c
         x1 = (-b + math.sqrt(temp1)) / (2 * a)
