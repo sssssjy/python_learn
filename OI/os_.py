@@ -31,7 +31,9 @@ print([x for x in os.listdir('.') if os.path.isdir(x)])
 print([x for x in os.listdir('.') if os.path.isfile(x) and os.path.splitext(x)[1] == '.py'])
 
 allFileList = []
-def findAllNameLikeFile(filename, dir = '.'):
+
+
+def findAllNameLikeFile(filename, dir='.'):
     dirList = [x for x in os.listdir(dir) if os.path.isdir(os.path.join(dir, x))]
     fileList = [x for x in os.listdir(dir) if os.path.isfile(os.path.join(dir, x)) and filename in os.path.split(x)[1]]
     allFileList.extend(fileList)
@@ -42,13 +44,14 @@ def findAllNameLikeFile(filename, dir = '.'):
         return
     for curDir in dirList:
         nextDir = ''
-        if(dir == '.'):
+        if (dir == '.'):
             nextDir = os.path.join(os.path.abspath('.'), curDir)
         else:
             nextDir = os.path.join(dir, curDir)
 
         findAllNameLikeFile(filename, nextDir)
     # print(dirList, fileList)
+
 
 findAllNameLikeFile('li')
 print(allFileList, 'allFileList')
