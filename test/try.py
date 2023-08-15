@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-#coding=utf-8 
+# coding=utf-8 
 
 import logging
 from functools import reduce
@@ -27,12 +27,15 @@ print('END')
 # except UnicodeError:
 #     print('unicode err')
 
+
 # try...except 可以跨越多层调用
 def foo(s):
     return 10 / int(s)
 
+
 def bar(s):
     return foo(s) * 2
+
 
 def main():
     try:
@@ -44,7 +47,9 @@ def main():
     finally:
         print('finally')
 
+
 main()
+
 
 # logging 记录错误信息 打印错误信息后会继续执行
 def main1():
@@ -53,40 +58,47 @@ def main1():
     except Exception as e:
         logging.exception(e)
 
+
 main1()
+
 print('END')
 
-# 自定义错误 raise
 
+# 自定义错误 raise
 class FooError(ValueError):
     pass
 
-def foo(s):
+
+def foo1(s):
     n = int(s)
     if n == 0:
         raise FooError('invalid value %s' % s)
     return 10 / n
 
-# foo('0')
+
+# foo1('0')
+
 
 # raise 语句不带参数 将把错误向上抛出 让上层调用者接收
-def bar():
+def bar1():
     try:
         foo('0')
-    except ValueError as e:
+    except ValueError:
         print('Value Error !!!')
         raise
 
-# bar()
+# bar1()
 
 
 def str2num(s):
     return float(s.strip())
 
+
 def calc(exp):
     ss = exp.split('+')
     ns = map(str2num, ss)
     return reduce(lambda acc, x: acc + x, ns)
+
 
 def main():
     r = calc('100 + 200 + 345')
