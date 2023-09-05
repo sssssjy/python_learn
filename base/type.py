@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-#coding=utf-8 
+# coding=utf-8
 
 # 整数
 # 过大可以用_分割
@@ -34,7 +34,7 @@ print(True and True)
 print(False or True)
 print(not 2 < 4)
 
-age = input('please enter your age:');
+age = input('please enter your age:')
 if int(age) > 18:
     print('adult')
 else:
@@ -48,6 +48,6 @@ else:
 # 常量 通常用全大写的变量名表示 (习惯用法 本质还是变量)
 
 # 除法
-print(10 / 3) #输出浮点数
-print(10 // 3) #地板除 输出整数
-print(10 % 3) #余数 输出整数
+print(10 / 3)  # 输出浮点数
+print(10 // 3)  # 地板除 输出整数
+print(10 % 3)  # 余数 输出整数

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-#coding=utf-8 
+# coding=utf-8
 
-# 切片
+# 切片 左闭右开
 
 list1 = [1, 2, 3, 4, 5]
 
@@ -31,16 +31,18 @@ print((0, 2, 4, 6, 8)[:4])
 # 字符串切片
 print("abcdefg"[:4])
 
+
 def trim(s):
-    if(len(s) == 0):
+    if (len(s) == 0):
         return s
-    if(s[0] != ' ' and s[-1] != ' '):
+    if (s[0] != ' ' and s[-1] != ' '):
         return s
-    if(s[0] == ' '):
+    if (s[0] == ' '):
         s = s[1:]
-    if(s[-1] == ' '):
+    if (s[-1] == ' '):
         s = s[:-1]
     return trim(s)
+
 
 if trim('hello  ') != 'hello':
     print('测试失败!')
