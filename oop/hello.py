@@ -1,3 +1,3 @@
 class Hello(object):
-    def hello(self, word = 'world'):
+    def hello(self, word='world'):
         print('hello,', word)

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-#coding=utf-8 
+# coding=utf-8
 
 # enum: 枚举
 
@@ -13,8 +13,8 @@ for name, member in Month.__members__.items():
 # 可使用Month.Jan来引用常量
 # value自动赋给成员的int常量 从1开始
 
-# 精确控制枚举
 
+# 精确控制枚举
 @unique
 class Weekday(Enum):
     Sun = 0
@@ -25,13 +25,16 @@ class Weekday(Enum):
     Fri = 5
     Sat = 6
 
+
 day1 = Weekday.Fri
-print(day1) #Weekday.Fri
-print(day1.value) #5
+print(day1)  # Weekday.Fri
+print(day1.value)  # 5
+
 
 class Gender(Enum):
     Male = 0
     Female = 1
+
 
 class Student(object):
     def __init__(self, name, gender: Gender):

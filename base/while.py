@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-#coding=utf-8 
+# coding=utf-8
 
 # for...in
 names = ['lily', 'machel', 'senerina']
@@ -43,4 +43,3 @@ while maxNum2 > 0:
         continue
     sum2 = sum2 + maxNum2
     maxNum2 = maxNum2 - 1
-    

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-#coding=utf-8 
+# coding=utf-8
 
 # dict 全称 dictionary,其他语言中称为Map，使用key-value
-d = {'mick': 3,'lily': 34}
+d = {'mick': 3, 'lily': 34}
 print(d['mick'])
 d['meta'] = 123
 print(d['meta'])
@@ -29,20 +29,18 @@ print(d)
 # dict
 # 查找和插入速度极快，不会随key的增加而减慢
 # 需要占用大量内存，内存浪费多 是一个空间换时间的方法
-# dict的key必须是不可变对象 
+# dict的key必须是不可变对象
 # dict根据key通过hash算法来计算value位置 若每次计算结果不同 dict内部会混乱
 
-
-
 # set key的集合 不能重复 必须是不可变对象
-s = set([1,2,3,3,3])
+s = set([1, 2, 3, 3, 3])
 print(s)
 # add() 添加key
 s.add('a')
 print(s)
 # 交集& 与 并集|
-s1 = set([12,3,23])
-s2 = set([12,55,235])
+s1 = set([12, 3, 23])
+s2 = set([12, 55, 235])
 print(s1 & s2)
 print(s1 | s2)
 
@@ -51,11 +49,11 @@ print(s1 | s2)
 # list 可变对象
 list1 = ['a', 'c', 'b']
 list1.sort()
-print(list1) #['a', 'b', 'c']
+print(list1)  # ['a', 'b', 'c']
 
 # str 不可变对象
 # replace 返回了一个新的str str1作为变量始终指向不变量'abc'
 str1 = 'abc'
-print(str1.replace('a', 'A')) #Abc 相当于 str2 = str1.replace('a', 'A')
-str2 = str1.replace('a', 'A') #Abc
-print(str1) #abc
+print(str1.replace('a', 'A'))  # Abc 相当于 str2 = str1.replace('a', 'A')
+str2 = str1.replace('a', 'A')  # Abc
+print(str1)  # abc

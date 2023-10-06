@@ -1,5 +1,5 @@
-import keyword
-
+# !/usr/bin/env python3
+# coding=utf-8
 
 # print 输出打印
 print('hello, world')
@@ -12,6 +12,3 @@ print('123+124=', 123 + 124)
 a = input('请输入第一个数')
 b = input('请输入第二个数')
 print('结果为', int(a) * int(b))
-
-# 打印所有关键字
-print(keyword.kwlist)

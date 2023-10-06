@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-#coding=utf-8 
+# coding=utf-8 
 
 # list
 list = [1, 2, 3]
@@ -16,7 +16,7 @@ list.insert(1, 5)
 list.pop()
 list.pop(3)
 
-#替换
+# 替换
 list[2] = 45
 print(list)
 

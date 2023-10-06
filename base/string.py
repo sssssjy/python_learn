@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-#coding=utf-8 
+# coding=utf-8
 
 # 字符编码
 
@@ -17,14 +17,14 @@
 # 若使用Unicode编码 会造成资源浪费 因此诞生UTF-8编码
 # 英文通常为1个字节 中文通常为3个字节 生僻字符可能为4-6个字节
 
-# 在计算机内存中 统一使用Unicode编码 
+# 在计算机内存中 统一使用Unicode编码
 # 保存至硬盘或传输时 使用UTF-8编码
 
-#ord() 获取字符的整数表示
+# ord() 获取字符的整数表示
 print(ord('A'))
 print(ord('中'))
 
-#chr() 将编码转为字符
+# chr() 将编码转为字符
 print(chr(54))
 print(chr(10023))
 
@@ -32,26 +32,26 @@ print(chr(10023))
 # 若要传输或者保存至硬盘 需要转为bytes
 # Python 对bytes类型的数据用 b'' 或者 b"" 表示
 
-a = 'ABC' #str
-b = b'ABC' #bytes 每个字符占用1个字节
+a = 'ABC'  # str
+b = b'ABC'  # bytes 每个字符占用1个字节
 
 # encode 编码转换
-print('ABC'.encode('ascii')) #b'ABC'
-print('中文'.encode('utf-8')) #b'\xe4\xb8\xad\xe6\x96\x87'
+print('ABC'.encode('ascii'))  # b'ABC'
+print('中文'.encode('utf-8'))  # b'\xe4\xb8\xad\xe6\x96\x87'
 # print('中文'.encode('ascii')) #报错 ASCII码中没有中文
 
 # decode 字节流转换编码
-print(b"ABC".decode('ascii')) #ABC
-print(b'\xe4\xb8\xad\xe6\x96\x87'.decode('utf-8')) #中文
+print(b"ABC".decode('ascii'))  # ABC
+print(b'\xe4\xb8\xad\xe6\x96\x87'.decode('utf-8'))  # 中文
 # 若decode中有无法解析的字符 会报错 使用 errors='ingore' 忽略
 print(b'\xe4\xb8\xad\xff'.decode('utf-8', errors='ignore'))
 
 # len 计算str字符数 计算bytes字节数
-print(len('ABC')) #3
-print(len('中文')) #2
+print(len('ABC'))  # 3
+print(len('中文'))  # 2
 
-print(len(b'ABC')) #3
-print(len('中文'.encode('utf-8'))) #6
+print(len(b'ABC'))  # 3
+print(len('中文'.encode('utf-8')))  # 6
 
 # 格式化 %
 # %d 整数 %f 浮点数 %s 字符串 %x 16进制数
