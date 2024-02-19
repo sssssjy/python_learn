@@ -99,7 +99,7 @@ class Model(dict, metaclass=ModelMetaclass):
             return self[key]
         except KeyError:
             raise AttributeError("r'Model' object does not have attribute %s" % key)
-        
+
     def __setattr__(self, key: str, value: Any) -> None:
         self[key] = value
 
