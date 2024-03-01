@@ -3,6 +3,7 @@
 """
 from random import randint
 
+
 # 函数阶乘 math.factorial
 def fact(n):
     result = 1
@@ -13,6 +14,7 @@ def fact(n):
 # n = int(input('请输入第二个数'))
 # print(fact(m)// fact(n) // fact(m - n))
 
+
 # 函数的默认值
 def roll_dice(n=2):
     total = 0
@@ -20,6 +22,7 @@ def roll_dice(n=2):
         # randint 左闭又闭 range 左闭右开
         total += randint(1, 6)
     return total
+
 
 def add_1(a=0, b=0, c=0):
     return a + b + c
@@ -32,6 +35,7 @@ def add_1(a=0, b=0, c=0):
 # print(add_1(c=3))
 # print(add_1(b=3, c=1, a=-1))
 
+
 # 可变参数 args
 def add_2(*args):
     total = 0
@@ -42,6 +46,7 @@ def add_2(*args):
 # print(add_2())
 # print(add_2(1, 2))
 
+
 # 实现计算求最大公约数和最小公倍数的函数。
 def gcd(x, y):
     # 最大公约数
@@ -50,9 +55,11 @@ def gcd(x, y):
         if y % i == 0 and x % i == 0:
             return i
 
+
 def lcm(x, y):
     # 最小公倍数
     return x * y // gcd(x, y)
+
 
 # 实现判断一个数是不是回文数的函数。
 def is_palindrome(num):
@@ -64,6 +71,7 @@ def is_palindrome(num):
         temp //= 10
     return res == num
 
+
 # 实现判断一个数是不是素数的函数。
 def is_prime(num):
     mid = num // 2 + 1
@@ -73,9 +81,11 @@ def is_prime(num):
             res = i
     return res == 1
 
+
 # 写一个程序判断输入的正整数是不是回文素数。
 def func_3(num):
     return is_prime(num) and is_palindrome(num)
+
 
 print(func_3(223456))
 print(func_3(34543))
@@ -85,11 +95,13 @@ print(func_3(123321))
 global 与 nonlocal
 """
 
+
 # 全局作用域 global
 def test():
     global a
     a = 200
     print(a)
+
 
 # nonlocal
 # 可以让最里面的函数使用最近的一个外函数已声明的变量，
@@ -114,6 +126,7 @@ def scope_test():
     print("After nonlocal assignment:", spam)
     do_global()
     print("After global assignment:", spam)
+
 
 scope_test()
 print("In global scope:", spam)
