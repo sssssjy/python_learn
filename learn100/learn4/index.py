@@ -73,14 +73,28 @@ print(sum_1)
 # print(f'最小公倍数{b * c // d}')
 
 # 打印三角形
-for i in range(5):
+row = int(input('请输入三角形行数'))
+for i in range(row):
     for j in range(i + 1):
         print('*', end='')
     print()
 
 print()
 
-for i in range(5, 0, -1):
+for i in range(row, 0, -1):
     for j in range(i):
         print('*', end='')
+    print()
+
+print()
+
+length = row * 2 - 1
+middle = length // 2 if length % 2 == 0 else length // 2 + 1
+print(length, middle)
+for i in range(row):
+    for j in range(length + 1):
+        if j >= middle - i - 1 and j <= middle + i - 1:
+            print('*', end='')
+        else:
+            print(' ', end='')
     print()
