@@ -2,7 +2,7 @@
 循环结构
 while for...in
 """
-import random
+# import random
 
 # for-in 循环求和
 # range(a, b, step = 1): 构建 a - b-1 范围 前闭后开 步长1
