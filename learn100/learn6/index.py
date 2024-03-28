@@ -19,7 +19,7 @@ def fact(n):
 def roll_dice(n=2):
     total = 0
     for _ in range(n):
-        # randint 左闭又闭 range 左闭右开
+        # randint 左闭右闭 range 左闭右开
         total += randint(1, 6)
     return total
 
